@@ -46,13 +46,14 @@ class MyApp extends StatelessWidget {
               ],
             ),
           ),
-          /* 02 - Star Icon */
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          /* 03 - number of people liked */
-          const Text('41'),
+          FavoriteWidget(),
+          // /* 02 - Star Icon */
+          // Icon(
+          //   Icons.star,
+          //   color: Colors.red[500],
+          // ),
+          // /* 03 - number of people liked */
+          // const Text('41'),
         ],
       ),
     );
@@ -124,6 +125,49 @@ class MyApp extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+// --- Stateful Widget: FavoriteWidget --- //
+class FavoriteWidget extends StatefulWidget {
+  const FavoriteWidget({Key? key}) : super(key: key);
+
+  @override
+  _FavoriteWidgetState createState() => _FavoriteWidgetState();
+}
+
+class _FavoriteWidgetState extends State<FavoriteWidget> {
+  bool _isFavorited = true;
+  int _favoriteCount = 41;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        IconButton(
+          icon: (_isFavorited ? Icon(Icons.star) : Icon(Icons.star_border)),
+          color: Colors.red[500],
+          onPressed: _toggleFavorite,
+        ),
+        Text('$_favoriteCount')
+      ],
+    );
+  }
+
+  // --- _toggleFavorite --- //
+  void _toggleFavorite() {
+    setState(
+      () {
+        if (_isFavorited) {
+          _favoriteCount -= 1;
+          _isFavorited = !_isFavorited;
+        } else {
+          _favoriteCount += 1;
+          _isFavorited = !_isFavorited;
+        }
+      },
     );
   }
 }
