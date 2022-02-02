@@ -13,6 +13,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // --- image section --- //
+    Widget imageSection = Image.asset(
+      'images/lake.jpg',
+      width: 600,
+      // height: 240,
+      height: 340,
+      fit: BoxFit.cover,
+    );
+
     // --- title section --- //
     Widget titleSection = Container(
       padding: const EdgeInsets.all(32),
@@ -86,6 +95,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
+            imageSection,
             titleSection,
             buttonSection,
             textSection,
