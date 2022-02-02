@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
     Widget imageSection = Image.asset(
       'images/lake.jpg',
       width: 600,
-      // height: 240,
-      height: 340,
+      height: 240,
+      // height: 340,
       fit: BoxFit.cover,
     );
 
@@ -93,7 +93,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter layout demo'),
         ),
-        body: Column(
+        body: ListView(
           children: [
             imageSection,
             titleSection,
