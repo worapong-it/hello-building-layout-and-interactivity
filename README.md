@@ -1,16 +1,5 @@
 # hello_building_layout
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- This flutter project was created following the instruction links: https://docs.flutter.dev/development/ui/layout/tutorial and https://docs.flutter.dev/development/ui/interactive.
+- This is a simple app that shows picture and detail of an example of tourist attraction (Oeschinen Lake Campground) with interactivity on an icon (red star) tap/click.
+- Apart from the instruction, I have tried separating codes from main.dart to separted widget files. And also add interactivity on call/route/share buttons as well.
